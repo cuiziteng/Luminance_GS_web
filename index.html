@@ -260,11 +260,8 @@
         </br>
         <div class="content has-text-justified">
           <p>
-            Given a pre-trained NeRF model, we sample its volumetric density grid to obtain the 3D scene representation.
-            This grid is converted to a semantic-feature grid by employing a fully convolutional volume-to-volume network thus allowing for geometric reasoning.
-            The semantic-feature grid is in turn translated to semantic probability distributions using the volumetric rendering equation.
-            Note the semantic 3D UNet is trained across all scenes in the <i>TrainScenes</i> set, though not explicitly depicted for the sake of simplicity. 
-            Additionally, note that NeSF is trained <i>solely</i> using 2D supervisory signals and that no segmentation maps are provided at test time.
+            **Overview of Luminance-GS pipeline**. ***Up***: Our method jointly optimize 3D Gaussians with two set of color attributes $c_i$ and $c_i^{out}$ to render out input images $C^{in}$ and pseudo enhanced images $C^{out}$. 
+***Down***: To translate $C^{in}$ into view-aligned enhanced $C^{out}$, we design 3 steps: 1. per-view color matrix mapping, 2. view-adptive curve adjustment, 3. color matrix mapping back.
           </p>
           </br>
         </div>
